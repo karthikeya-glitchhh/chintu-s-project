@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+<div id="myBtnContainer">
+	<button class="btn active" onclick="filterSelection('all')"> Show all</button>
+	<button class="btn" onclick="filterSelection('cars')"> Cars</button>
+	<button class="btn" onclick="filterSelection('animals')"> Animals</button>
+	<button class="btn" onclick="filterSelection('art')"> Art</button>
+	<button class="btn" onclick="filterSelection('architecture')"> Architecture</button>
+</div>
+
+<div class="container">
+	<div class="filterDiv cars"><img class="filterimg" onclick="myFunction(this);" src="https://iili.io/JZ2F3DF.jpg" alt=""></div>
+	<div class="filterDiv animals"><img class="filterimg" onclick="myFunction(this);" src="https://iili.io/JZ2F7iG.jpg" alt=""></div>
+	<div class="filterDiv art"><img class="filterimg" onclick="myFunction(this);" src="https://iili.io/JZ2FIRI.jpg" alt=""></div>
+	<div class="filterDiv architecture"><img class="filterimg" onclick="myFunction(this);" src="https://iili.io/JZ2FTNt.jpg" alt=""></div>
+	<div class="filterDiv cars"><img onclick="myFunction(this);" src="https://iili.io/JZ2FKog.jpg" alt=""></div>
+	<div class="filterDiv animals"><img class="filterimg" onclick="myFunction(this);" src="https://iili.io/JZ2F5Vs.jpg" alt=""></div>
+	<div class="filterDiv art"><img class="filterimg" onclick="myFunction(this);" src="https://iili.io/JZ2FqiJ.jpg" alt=""></div>
+	<div class="filterDiv architecture"><img class="filterimg" onclick="myFunction(this);" src="https://iili.io/JZ2FCKv.jpg" alt=""></div>
+	<div class="filterDiv cars"><img class="filterimg" onclick="myFunction(this);" src="https://iili.io/JZ2FfVa.jpg" alt=""></div>
+	<div class="filterDiv animals"><img class="filterimg" onclick="myFunction(this);" src="https://iili.io/JZ2FRxn.jpg" alt=""></div>
+	<div class="filterDiv art"><img class="filterimg" onclick="myFunction(this);" src="https://iili.io/JZ2F2N1.jpg" alt=""></div>
+	<div class="filterDiv architecture"><img class="filterimg" onclick="myFunction(this);" src="https://iili.io/JZ2FzHN.jpg" alt=""></div>
+</div>
+
+<div id="expandedImgDiv" style="display:none;">
+	<img id="expandedImg">
+	<div id="imgtext">this is a test</div>
+	<div class="filter-box"></div>
+	<div>
+		<button class="btn close" onclick="closeImg()">Close</button>
+		<button class="btn contrast" onclick="applyFilter(0, 'contrast', '150%')">Contrast</button>
+		<button class="btn brightness" onclick="applyFilter(0, 'brightness', '200%')">Brightness</button>
+		<button class="btn sepia" onclick="applyFilter(0, 'sepia', '50%')">Sepia</button>
+		<button class="btn invert" onclick="applyFilter(0, 'invert', '100%')">Invert</button>
+		<button class="btn grayscale" onclick="applyFilter(0, 'grayscale', '100%')">Grayscale</button>
+		<button class="btn blur" onclick="applyFilter(0, 'blur', '10px')">Blur</button>
+		<button class="btn hue-rotate" onclick="applyFilter(0, 'hue-rotate', '90deg')">Hue Rotate</button>
+		<button class="btn saturate" onclick="applyFilter(0, 'saturate', '200%')">Saturate</button>
+
+	</div>
+	
+<script src="script.js"></script>
+</div>
+</body>
+</html>

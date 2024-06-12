@@ -1,0 +1,172 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	background-color: #3a3a3a;
+	background: linear-gradient(90deg, #3a3a3a 0%, #161616 100%);
+}
+
+.filterDiv {
+	float: left;
+	color: #ffffff;
+	height: 67px;
+	text-align: center;
+	margin: 2px;
+	display: none;
+	border-radius: 3px;
+	box-shadow: 3px 1px 3px #3a3a3a;
+	cursor: pointer;
+	width: 96px;
+	line-height: 70px;
+}
+
+.filterDiv img {
+	width: 100%;
+	height: 100%;
+	border-radius: 3px;
+}
+
+/*hover zoom*/
+.filterDiv:hover {
+	animation: zoomin 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes zoomin {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.1);
+	}
+}
+
+/* The "show" class is added to the filtered elements */
+.filterDiv.show {
+	display: block;
+}
+
+.show {
+	display: block;
+	animation: fadeinright 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.filter-box {
+	display: flex;
+	gap: 20px;
+}
+
+.filter-choice {
+	filter: blur(1px);
+}
+
+#myBtnContainer {
+	margin: auto;
+	margin-top: 30px;
+	width: 400px;
+}
+
+.container {
+	margin: auto;
+	width: 300px;
+	margin-top: 100px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	transform: rotate(20deg);
+	overflow: hidden;
+}
+
+/* Style the buttons */
+.btn {
+	border: none;
+	outline: none;
+	padding: 8px 12px;
+	margin-bottom: 10px;
+	background-color: #f1f1f1;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.btn:hover {
+	background-color: #ddd;
+}
+
+.btn.active {
+	background-color: #666;
+	color: white;
+}
+
+.close {
+	padding: 8px 12px;
+	background-color: #666;
+	color: white;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.close:hover {
+	background-color: #ddd;
+	color: #666;
+}
+
+#expandedImgDiv {
+	position: absolute;
+	top: 170px;
+	display: none;
+}
+
+#expandedImg {
+	animation-name: fadeinright;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+li {
+	color: #ffffff;
+	font-size: 14px;
+	letter-spacing: 0.3px;
+}
+
+@keyframes fadeinright {
+	0% {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+img {
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		margin: auto;
+		width: 300px;
+		margin-top: 100px;
+		padding: 20px;
+		border: 1px solid #ccc;
+	}
+
+	.filterDiv {
+		width: 96px;
+		line-height: 70px;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+
